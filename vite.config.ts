@@ -3,12 +3,24 @@ import vue from '@vitejs/plugin-vue'
 import nitro from '@analogjs/vite-plugin-nitro';
 
 // https://vite.dev/config/
-export default defineConfig({
+export default defineConfig(({ isSsrBuild }) => ({
+  build: {
+    target: ['es2020'],
+    outDir: 'dist/client',
+  },
+  resolve: {
+    mainFields: ['module'],
+  },
   plugins: [
-    vue(),
+    isSsrBuild ? [] : vue(),
     nitro({
       ssr: true,
-      entryServer: 'src/main.server.ts'
-    })
+      entryServer: `${__dirname}/src/main.server.ts`,
+    }, {
+      output: {
+        dir: '.output',
+        publicDir: '.output/public'
+      }
+    }),
   ],
-});
+}));

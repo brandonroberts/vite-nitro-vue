@@ -17,7 +17,7 @@ export default async function render(_url: string, template: string) {
   return html;
 }
 
-function renderPreloadLinks(modules: any[], manifest: any) {
+function renderPreloadLinks(modules: any[] = [], manifest: any) {
   let links = ''
   const seen = new Set()
   modules.forEach((id) => {

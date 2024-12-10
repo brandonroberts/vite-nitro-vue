@@ -1,12 +1,12 @@
 {
-  "name": "vite-vue-nitro",
+  "name": "vite-nitro-vue",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc -b && vite build",
-    "preview": "vite preview"
+    "preview": "cross-env NODE_ENV=production node .output/server/index.mjs"
   },
   "dependencies": {
     "vue": "^3.5.13"
@@ -14,6 +14,7 @@
   "devDependencies": {
     "@analogjs/vite-plugin-nitro": "^1.10.1",
     "@vitejs/plugin-vue": "^5.2.1",
+    "cross-env": "^7.0.3",
     "typescript": "~5.6.2",
     "vite": "^6.0.1",
     "vue-tsc": "^2.1.10"
