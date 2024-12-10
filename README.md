@@ -1,5 +1,26 @@
-# Vue 3 + TypeScript + Vite
+# Vue + Vite + Nitro
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+This is an example Vue application using the Vite/Nitro plugin from [AnalogJS](https://analogjs.org). The `@analogjs/vite-plugin-nitro` package can be used with any Vite-based application to provide:
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+- Hybrid Server-side Rendering
+- Static Site Generation
+- API Routes
+
+## Setup
+
+Run `npm install` to install the application dependencies.
+
+## Development
+
+Run `npm run dev` for a dev server. Navigate to `http://localhost:5173/`. The application automatically reloads if you change any of the source files.
+
+## Build
+
+Run `npm run build` to build the client/server project. The client build artifacts are located in the `.output/public` directory. The server for the API build artifacts are located in the `.output/server` directory.
+
+## Community
+
+- Visit and Star the [GitHub Repo](https://github.com/analogjs/analog)
+- Join the [Discord](https://chat.analogjs.org)
+- Follow us on [Twitter](https://twitter.com/analogjs)
+- Become a [Sponsor](https://github.com/sponsors/brandonroberts)
